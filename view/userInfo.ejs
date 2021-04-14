@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <center>
+        
+        
+        <%if(userInfo.length>0)
+            { 
+             userInfo.forEach(function(info){%>
+                <h1>Update Form</h1>
+                <form action="/update" method="GET">
+        <table>
+           
+            <tr>
+               <th>Email Id</th> 
+               <td><input name="email" value="<%=info.personEmail%>" readonly></td>
+            </tr>
+            <tr>
+                <th>Name</th> 
+                <td><input name="name" value="<%=info.personName%>"></td>
+             </tr>
+             <tr>
+                <th>Gender</th> 
+                <td>
+                    <input type="radio" name="gender" value="male" <% if(info.personGender=='male') {%> checked <%}%> >Male
+                    <input type="radio" name="gender" value="female" <% if(info.personGender=='female'){ %> checked <%}%> >Female
+                    <input type="radio" name="gender" value="other"  <% if(info.personGender=='other'){%>  checked<%}%>>Other
+                </td>
+             </tr>
+             <tr>
+                <th>Hobbies</th> 
+                <td><input name="hobbies" value="<%=info.personHobbies%>"></td>
+             </tr>
+             
+        </table>
+        <br>
+        <button type="submit" >Update</button>
+        <a href="index.html">LogOut</a>
+                </form>
+        <%})}else{%>
+           
+               
+                    
+                    <form action="/findPerson" method="GET">
+                        <h1>Login Page</h1>
+                        <h2 style="color: rgba(250, 10, 10, 0.979);">In Correct Credentials</h2>
+                        <div class="container">
+            <table>
+               
+                <tr>
+                    <th>Enter Your Mail :</th>
+                    <td><input type="email" name="email" required></td>
+                </tr>
+                <tr>
+                    <th>Enter Your Password :</th>
+                    <td><input type="password" name="pass" required></td>
+                </tr>
+            </table>
+                        </div>
+                        <button type="submit" >Submit</button> <br>
+                       No Account ? <a href="signUp.html">Sign Up</a>
+                    </form>
+              
+            <%}%>
+    </center>
+</body>
+</html>
