@@ -1,0 +1,11 @@
+1.wap for deep cloning? //override clone method
+2.Diff Bw copying and cloning?
+3.wap to get portion of map whos key range is from given key to another key?
+4.wap to find lowest and highest value in AL?
+5.wap to create an AL of userdefined type and print the elements?
+6.wap to add entry if it is not present?
+7.wap to remove entry based on key?
+8.wap to remove entry based on value?
+9.5.wap to create an set of userdefined type and print the elements?
+10.wap to print Al elements using forloop,foreach,iterator?
+11.wap to print set elements using forloop,foreach,iterator?

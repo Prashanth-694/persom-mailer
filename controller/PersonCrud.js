@@ -5,11 +5,11 @@ var mailer=require('../services/mailer');
 const db=require('../services/db');
 
 //add employee
-let addPerson=async(email,pass,name,gender,hobbies)=>{
+let addPerson=async(email,pass,name,gender,hobbies,img)=>{
     try{
         console.log(email,pass,name,gender,hobbies);
-    let add= await new person({personEmail:email,personPass:pass,personName:name,personGender:gender,personHobbies:hobbies}).save();
-   mailer.sendMailer(email,name,pass)
+    let add= await new person({personEmail:email,personPass:pass,personName:name,personGender:gender,personHobbies:hobbies,personImage:img}).save();
+//    mailer.sendMailer(email,name,pass)
     return "Added Succesfull."
 }
     catch(error){

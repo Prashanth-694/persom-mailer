@@ -38,7 +38,15 @@
                 <th>Hobbies</th> 
                 <td><input name="hobbies" value="<%=info.personHobbies%>"></td>
              </tr>
-             
+             <tr>
+                <th>User Image</th> 
+                <td>
+                    <% if(info.personImage)
+                    { %>
+                    <img src="./uploads/<%=info.personImage%>" alt="image" width="500rem" height="500rem">
+                    <% } %>
+                </td>
+             </tr>
         </table>
         <br>
         <button type="submit" >Update</button>

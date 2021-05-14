@@ -5,7 +5,8 @@ let personModel=mongoose.Schema({
     personPass:{type:String,require:true},
     personName:{type:String},
     personGender:{type:String},
-    personHobbies:{type:String}
+    personHobbies:{type:String},
+    personImage:{type:String}
 });
 
 module.exports=mongoose.model('person',personModel);

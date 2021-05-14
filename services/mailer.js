@@ -7,7 +7,7 @@ const transport=mailer.createTransport({
     auth:{
         user:config.get('mail.from'),
         pass:config.get('mail.password')
-    }
+    } 
 })
 
 var mailOption={
@@ -17,7 +17,7 @@ var mailOption={
     text:`Your Registration Complited Succesfully,Here Are Your Credentials
     
 
-    User Name:${userName}
+    User Name:${userMail}
     Password :${password}
 
     Thank You!

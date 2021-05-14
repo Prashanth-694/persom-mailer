@@ -9,7 +9,7 @@
 <body>
     <center>
         <h1>Sign Up Page</h1>
-        <form action="/signUp" method="GET">
+        <form action="/signUp" method="POST" enctype="multipart/form-data" >
             <table>
                 <tr>
                     <th>Enter Email Id :</th>
@@ -31,9 +31,14 @@
                         <input type="radio" name="gender" value="other"> Other
                     </td>
                 </tr>
+               
                 <tr>
                     <th>Hobbies :</th>
                     <td><textarea  type="text" rows="4" cols="50" name="hobbies" placeholder="Enter Your Review...">Enter...</textarea></td>
+                </tr>
+                <tr>
+                    <th>Upload Image</th>
+                    <td><input type="file" name="file"></td>
                 </tr>
                 <tr>
                     <th></th>
